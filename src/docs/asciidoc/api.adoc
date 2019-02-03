@@ -5,9 +5,50 @@
 :toc: left
 :toclevels: 4
 :sectlinks:
-== 首页
-使用 `GET` 请求来访问首页。
-= index
-operation::index[]
-= order
-operation::order[]
+:sectnums:
+
+= 生成的 api 文档
+
+== 通用返回值说明
+
+|===
+|Path|Type|Description
+
+|code
+|Number
+|请求状态. 0: 成功, -1: 失败
+
+|message
+|String
+|请求的消息说明, 当请求 code != 0 时, 显示给用户
+
+|data
+|Object
+|返回的有效数据
+|===
+
+== simple
+=== 功能说明
+
+最简单的 get 接口
+
+=== api
+operation::simple[]
+
+
+== orderWithPathVariable
+=== 功能说明
+
+通过 path 参数获取一个订单信息
+
+=== api
+operation::orderWithPathVariable[]
+
+== create-order
+=== 功能说明
+
+这是一个创建订单的接口
+
+=== api
+operation::order/create[]
+
