@@ -2,7 +2,8 @@ package com.yangxiaochen.demo.spring.resetdocs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
-import com.yangxiaochen.demo.spring.resetdocs.vo.CreateOrderParam;
+import com.yangxiaochen.demo.spring.resetdocs.controller.Result;
+import com.yangxiaochen.demo.spring.resetdocs.controller.vo.CreateOrderParam;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -35,8 +36,8 @@ import static org.springframework.restdocs.snippet.Attributes.key;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
-public class SpringResetdocsDemoApplicationTests {
+@SpringBootTest(properties = "spring.profiles.active=mock")
+public class ApplicationTests {
 
     @Rule
     public JUnitRestDocumentation restDocumentation = new JUnitRestDocumentation();

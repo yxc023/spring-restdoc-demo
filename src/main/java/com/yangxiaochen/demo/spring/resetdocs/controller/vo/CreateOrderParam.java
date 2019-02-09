@@ -1,4 +1,4 @@
-package com.yangxiaochen.demo.spring.resetdocs.vo;
+package com.yangxiaochen.demo.spring.resetdocs.controller.vo;
 
 import lombok.Data;
 

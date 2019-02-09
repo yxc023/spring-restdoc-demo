@@ -1,7 +1,8 @@
-package com.yangxiaochen.demo.spring.resetdocs;
+package com.yangxiaochen.demo.spring.resetdocs.controller;
 
-import com.yangxiaochen.demo.spring.resetdocs.vo.CreateOrderParam;
-import com.yangxiaochen.demo.spring.resetdocs.vo.OrderInfo;
+import com.yangxiaochen.demo.spring.resetdocs.controller.vo.CreateOrderParam;
+import com.yangxiaochen.demo.spring.resetdocs.controller.vo.OrderInfo;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
@@ -11,7 +12,8 @@ import java.util.Date;
  * @author yangxiaochen
  */
 @RestController
-public class IndexController {
+@Profile("mock")
+public class IndexControllerMock implements IndexController {
 
     @RequestMapping("/simple")
     public String simple() {
